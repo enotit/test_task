@@ -1,15 +1,17 @@
 package model;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
 public class Article {
+    @Id
+    public ObjectId id;
     public String name;
     public String description;
     public String photo;
     public Category category;
-
-    public Article() {
-    }
 
     public Article(String name, String description, String photo, Category category) {
         this.name = name;
@@ -21,7 +23,8 @@ public class Article {
     @Override
     public String toString() {
         return "Article{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", photo='" + photo + '\'' +
                 ", category=" + category +
