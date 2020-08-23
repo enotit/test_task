@@ -14,9 +14,8 @@
 	<name>test_task</name>
 	<description>Demo project for Spring Boot</description>
 
-
 	<properties>
-		<java.version>14</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -53,6 +52,15 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

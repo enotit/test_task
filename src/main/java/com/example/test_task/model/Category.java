@@ -1,12 +1,10 @@
-package model;
+package com.example.test_task.model;
 
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class Category {
-    @Id
-    public ObjectId id;
     public String name;
     public String description;
     public String photo;
@@ -22,8 +20,7 @@ public class Category {
     @Override
     public String toString() {
         return "Category{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", photo='" + photo + '\'' +
                 '}';

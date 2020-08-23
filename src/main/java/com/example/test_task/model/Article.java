@@ -1,9 +1,7 @@
-package model;
+package com.example.test_task.model;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
-
-import java.util.List;
 
 public class Article {
     @Id
@@ -19,6 +17,8 @@ public class Article {
         this.photo = photo;
         this.category = category;
     }
+
+    public Article() {}
 
     @Override
     public String toString() {

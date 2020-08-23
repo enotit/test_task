@@ -9,14 +9,15 @@ import org.bson.codecs.pojo.PojoCodecProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 @Configuration
+@PropertySource(value = "application.properties", ignoreResourceNotFound = true)
 class SpringConfiguration {
-
-    @Value("${mongodb://localhost:8080}")
+    @Value("${mongo.connectionString}")
     private String client;
 
     @Bean
